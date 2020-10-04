@@ -26,10 +26,12 @@ module.exports = class EventManager {
     }
     const description = eventList[Math.floor(Math.random() * eventList.length)];
     const date = Date.now();
+    const id = uuid.v4();
     return {
-      id: uuid.v4(),
+      id,
       event,
       data: JSON.stringify({
+        id,
         description,
         date,
       }),
@@ -44,10 +46,12 @@ module.exports = class EventManager {
     let eventObj;
     if (this.events.length === this.maxSize) {
       this.done = true;
+      const id = uuid.v4();
       eventObj = {
-        id: uuid.v4(),
+        id,
         event: 'action',
         data: JSON.stringify({
+          id,
           description: 'Конец игры',
           date: Date.now(),
         }),
