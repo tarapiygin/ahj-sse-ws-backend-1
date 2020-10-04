@@ -1,0 +1,33 @@
+{
+  "name": "ahj-http-backend",
+  "version": "1.0.0",
+  "description": "server",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "nodemon --ignore './data.json' --ignore './piblic/*' server.js",
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": "11.x"
+  },
+  "author": "Vassilyev Denis <tarapiygin@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.1"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "core-js": "3",
+    "http-event-stream": "^0.2.0",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-multer": "^1.0.2",
+    "koa-router": "^9.4.0",
+    "koa-static": "^5.0.0",
+    "nodemon": "^2.0.4",
+    "uuid": "^8.3.0"
+  }
+}
